@@ -1,0 +1,10 @@
+```mermaid
+sequenceDiagram
+    participant User
+    participant browser
+    participant server
+    User->>Browser: Type note and click "Save"
+    Note over Browser: JS intercepts the form submission
+    Browser->>Server: POST /new_note_spa with note data (AJAX)
+    Server-->>Browser: 201 Created (or success response)
+```
